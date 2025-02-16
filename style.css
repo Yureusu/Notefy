@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.content-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px;
+    gap: 12px;
+}
+#note-info{
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#app-title{
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+}
+#note-wrapper{
+    flex: 1;
+    width: 100%;
+    padding: 12px;
+    gap: 12px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#add-note{
+    height: 190px;
+    width: 190px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(216, 214, 214);
+}
+#add-note i{
+    font-size: 96px;
+    color: rgb(156, 156, 156);
+}
+#add-popup, #edit-popup{
+    height: 420px;
+    width: 420px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 24px 12px 24px;
+    gap: 12px;
+    background-color: rgb(216, 214, 214);
+    box-shadow: 0px 0px 0px 100vmax rgb(0, 0, 0, 0.3);
+}
+#close-note, #close-editnote{
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    cursor: pointer;
+    font-size: 32px;
+    color: rgb(168, 168, 168);
+    padding: 8px;
+}
+#close-note:hover, #close-editnote:hover{
+    color: coral;
+    transition: 0.3s ease-in-out;
+}
+#title-area , #edit-titlearea{
+    width: 100%;
+    height: 42px;
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    resize: none;
+    overflow: hidden;
+    font-weight: 500;
+}
+#note-area, #edit-notearea{
+    width: 100%;
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    resize: none;
+    overflow-y: none;
+}
+#save-note, #edit-save{
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(124, 124, 124);
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgb(168, 168, 168);
+}
+#save-note:hover, #edit-save:hover{
+    color: white;
+    background-color: coral;
+    transition: 0.3s ease-in-out;
+}
+#note-wrapper span{
+    height: 190px;
+    width: 190px;
+    cursor: pointer;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    background-color: rgb(216, 214, 214);
+}
+#note-wrapper span h4{
+    font-size: 16px;
+    text-overflow: ellipsis;
+}
+#note-wrapper span h6{
+    font-size: 14px;
+    font-weight: normal;
+    overflow-y: hidden;
+}
+#delete-note{
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(124, 124, 124);
+}
+#delete-note:hover{
+    color: coral;
+    transition: 0.3s ease-in-out;
+}
+#edit-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+#successedit-popup, #successdelete-popup{
+    height: 420px;
+    width: 420px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 24px 12px 24px;
+    gap: 12px;
+    background-color: white;
+    box-shadow: 0px 0px 0px 100vmax rgb(0, 0, 0, 0.3);
+}
+#close-sucedpopup, #close-sucdelpopup{
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    cursor: pointer;
+    font-size: 32px;
+    color: rgb(168, 168, 168);
+    padding: 8px;
+}
+#close-sucedpopup:hover, #close-sucdelpopup:hover{
+    color: coral;
+    transition: 0.3s ease-in-out;
+}
+#suced-wrapper, #sucdel-wrapper{
+    flex: 1;
+    width: 100%;
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+}
+#suced-wrapper h4, #sucdel-wrapper h4{
+    margin-top: 24px;
+    text-align: center;
+    font-size: 32px;
+    color: black;
+}
+#suced-wrapper img, #sucdel-wrapper img{
+    height: 200px;
+    width: 200px;
+}

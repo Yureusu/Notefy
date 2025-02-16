@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notefy v0.1</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div id="note-info">
+            <a id="app-title" href="" style="text-decoration: none;">Notefy</a>
+        </div>
+        <div id="note-wrapper">
+            <div id="add-note"><i class="fa-solid fa-plus"></i></div>
+        </div>
+        <div id="add-popup">
+            <i id="close-note" class="fa-solid fa-circle-xmark"></i>
+            <textarea placeholder="Title" id="title-area" maxlength="36"></textarea>
+            <textarea placeholder="Type some text..." id="note-area"></textarea>
+            <i id="save-note" class="fa-solid fa-check"></i>
+        </div>
+        <div id="edit-popup">
+            <i id="close-editnote" class="fa-solid fa-circle-xmark"></i>
+            <textarea placeholder="Title" id="edit-titlearea" maxlength="36"></textarea>
+            <textarea placeholder="Type some text..." id="edit-notearea"></textarea>
+            <div id="edit-wrapper">
+                <i id="edit-save" class="fa-solid fa-check"></i>
+                <i id="delete-note" class="fa-solid fa-trash-can"></i>
+            </div>
+        </div>
+        <div id="successedit-popup">
+            <i id="close-sucedpopup" class="fa-solid fa-circle-xmark"></i>
+            <div id="suced-wrapper">
+                <h4>Note edited successfully.</h4>
+                <img src="assets/double-check.gif" alt="">
+            </div>
+        </div>
+        <div id="successdelete-popup">
+            <i id="close-sucdelpopup" class="fa-solid fa-circle-xmark"></i>
+            <div id="sucdel-wrapper">
+                <h4>Note deleted successfully.</h4>
+                <img src="assets/trash.gif" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
