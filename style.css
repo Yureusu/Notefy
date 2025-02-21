@@ -5,6 +5,11 @@
     scroll-behavior: smooth;
     font-family: "Poppins", serif;
 }
+:root{
+    --mode-wcolor: #ffffff;
+    --mode-fcolor: #37474f;
+    --mode-bcolor: #dee4e7;
+}
 body{
     height: 100vh;
     width: 100%;
@@ -22,20 +27,27 @@ body{
     justify-content: flex-start;
     padding: 24px;
     gap: 12px;
+    background-color: var(--mode-wcolor);
 }
 #header{
     height: auto;
     width: 100%;
     padding: 12px;
-    background-color: rgb(216, 214, 214);
+    background-color: var(--mode-bcolor);
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
+    gap: 12px;
+}
+#title-icon{
+    height: 64px;
+    width: 64px;
+    cursor: pointer;
 }
 #app-title{
     font-size: 32px;
-    color: black;
+    color: var(--mode-fcolor);
     font-weight: bold;
 }
 #note-wrapper{
@@ -43,12 +55,14 @@ body{
     width: 100%;
     padding: 12px;
     gap: 12px;
-    border: 1px solid black;
+    border: 1px solid var(--mode-fcolor);
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
+    overflow-y: scroll;
+    background-color: var(--mode-wcolor);
 }
 #add-note{
     height: 190px;
@@ -58,11 +72,44 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(216, 214, 214);
+    background-color: var(--mode-bcolor);
 }
 #add-note i{
     font-size: 96px;
-    color: rgb(156, 156, 156);
+    color: var(--mode-fcolor);
+}
+#header-space{
+    flex: 1;
+}
+#dark-mode{
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: block;
+    background-image: url('assets/dark-mode.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 48px 48px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#light-mode{
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: none;
+    background-image: url('assets/light-mode.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 48px 48px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 #add-popup, #edit-popup{
     height: 420px;
@@ -74,7 +121,7 @@ body{
     justify-content: flex-start;
     padding: 24px 24px 12px 24px;
     gap: 12px;
-    background-color: rgb(216, 214, 214);
+    background-color: #dee4e7;
     box-shadow: 0px 0px 0px 100vmax rgb(0, 0, 0, 0.3);
 }
 #close-note, #close-editnote{
@@ -85,11 +132,11 @@ body{
     justify-self: flex-end;
     cursor: pointer;
     font-size: 32px;
-    color: rgb(168, 168, 168);
+    color: #37474f;
     padding: 8px;
 }
 #close-note:hover, #close-editnote:hover{
-    color: coral;
+    color: #DE8F5F;
     transition: 0.3s ease-in-out;
 }
 #title-area , #edit-titlearea{
@@ -116,14 +163,14 @@ body{
 #save-note, #edit-save{
     cursor: pointer;
     font-size: 18px;
-    color: rgb(124, 124, 124);
+    color: #37474f;
     padding: 8px;
     border-radius: 50%;
-    background-color: rgb(168, 168, 168);
+    background-color: #dee4e7;
 }
 #save-note:hover, #edit-save:hover{
-    color: white;
-    background-color: coral;
+    color: #dee4e7;
+    background-color: #37474f;
     transition: 0.3s ease-in-out;
 }
 #note-wrapper span{
@@ -136,14 +183,16 @@ body{
     align-items: flex-start;
     justify-content: flex-start;
     gap: 12px;
-    background-color: rgb(216, 214, 214);
+    background-color: var(--mode-bcolor);
 }
 #note-wrapper span h1{
+    color: var(--mode-fcolor);
     font-size: 16px;
     font-weight: 600;
     text-overflow: ellipsis;
 }
 #note-wrapper span h2{
+    color: var(--mode-fcolor);
     font-size: 14px;
     font-weight: normal;
     overflow: hidden;
@@ -151,11 +200,15 @@ body{
 }
 #delete-note{
     cursor: pointer;
-    font-size: 30px;
-    color: rgb(124, 124, 124);
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    color: #37474f;
+    background-color: #dee4e7;
 }
 #delete-note:hover{
-    color: coral;
+    color: #dee4e7;
+    background-color: #37474f;
     transition: 0.3s ease-in-out;
 }
 #edit-wrapper{
@@ -175,7 +228,7 @@ body{
     justify-content: flex-start;
     padding: 24px 24px 12px 24px;
     gap: 12px;
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0px 0px 0px 100vmax rgb(0, 0, 0, 0.3);
 }
 #close-sucedpopup, #close-sucdelpopup, #close-addedpopup{
@@ -186,11 +239,11 @@ body{
     justify-self: flex-end;
     cursor: pointer;
     font-size: 32px;
-    color: rgb(168, 168, 168);
+    color: #37474f;
     padding: 8px;
 }
 #close-sucedpopup:hover, #close-sucdelpopup:hover, #close-addedpopup:hover{
-    color: coral;
+    color: #DE8F5F;
     transition: 0.3s ease-in-out;
 }
 #suced-wrapper, #sucdel-wrapper, #addednote-wrapper{
@@ -203,13 +256,13 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: white;
+    background-color: #ffffff;
 }
 #suced-wrapper h4, #sucdel-wrapper h4, #addednote-wrapper h4{
     margin-top: 24px;
     text-align: center;
     font-size: 32px;
-    color: black;
+    color: #37474f;
 }
 #suced-wrapper img, #sucdel-wrapper img{
     height: 200px;
