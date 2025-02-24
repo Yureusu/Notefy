@@ -26,6 +26,8 @@ addNote.addEventListener("click", () => {
     addPopup.style.display = "flex";
 }); 
 
+let noteColor = "#dee4e7";
+
 document.getElementById("save-note").addEventListener("click", async (e) => {
     e.preventDefault();
     try{
@@ -35,6 +37,7 @@ document.getElementById("save-note").addEventListener("click", async (e) => {
         await addDoc(collection(db, "notes"),{
             title: titleValue,
             note: noteValue,
+            color: noteColor,
             createdAt: serverTimestamp()
         });
         document.querySelectorAll("#note-span").forEach(span => span.remove());
@@ -64,6 +67,7 @@ onSnapshot(colRef, (snapshot) => {
             let currentId = doc.id;
             let titleDisplay = doc.data().title;
             let noteDisplay = doc.data().note;
+            let displayColor = doc.data().color;
 
             const noteField = document.getElementById("note-wrapper");
             const noteSpan = document.createElement("span");
@@ -74,6 +78,7 @@ onSnapshot(colRef, (snapshot) => {
             textSpan.textContent = noteDisplay;
             noteSpan.setAttribute("id", "note-span");
             noteSpan.setAttribute("name", currentId);
+            noteSpan.style.backgroundColor = displayColor;
 
             noteSpan.appendChild(titleSpan);
             noteSpan.appendChild(textSpan);
@@ -121,7 +126,7 @@ onSnapshot(colRef, (snapshot) => {
                         let currentTitle = event.target.querySelector("h1").textContent;
                         let currentNote = event.target.querySelector("h2").textContent;        
                         
-                        //console.log("The clicked note has an id: " + idValue + " " + "Title: " + currentTitle + " " + "Note: " + currentNote);      
+                        console.log("The clicked note has an id: " + idValue + " " + "Title: " + currentTitle + " " + "Note: " + currentNote);      
 
                         let editTitleValue = document.getElementById("edit-titlearea");
                         editTitleValue.textContent = currentTitle;
@@ -209,6 +214,33 @@ document.getElementById("light-mode").addEventListener("click", () => {
     document.documentElement.style.setProperty('--mode-wcolor', '#ffffff');
 });
 
+//change color
 
-//
+document.getElementById("change-color").addEventListener("click", () => {
+    document.getElementById("color-popup").style.display = "flex";
+});
+document.getElementById("close-colorpopup").addEventListener("click", () => {
+    document.getElementById("color-popup").style.display = "none";
+});
+document.getElementById("null-note").addEventListener("click", () => {
+    document.getElementById("color-popup").style.display = "none";
+    document.getElementById("change-color").style.backgroundColor = "none";
+    noteColor = "#dee4e7";
+});
+document.getElementById("red-note").addEventListener("click", () => {
+    document.getElementById("color-popup").style.display = "none";
+    document.getElementById("change-color").style.backgroundColor = "#FF8A8A";
+    noteColor = "#FF8A8A";
+});
+document.getElementById("green-note").addEventListener("click", () => {
+    document.getElementById("color-popup").style.display = "none";
+    document.getElementById("change-color").style.backgroundColor = "#C1CFA1";
+    noteColor = "#C1CFA1";
+});
+document.getElementById("blue-note").addEventListener("click", () => {
+    document.getElementById("color-popup").style.display = "none";
+    document.getElementById("change-color").style.backgroundColor = "#A6AEBF";
+    noteColor = "#A6AEBF";
+});
+
 
