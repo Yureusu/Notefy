@@ -18,7 +18,7 @@
         cursor: pointer;
     }
     #app-title{
-        font-size: 28px;
+        font-size: 24px;
         color: var(--mode-fcolor);
         font-weight: bold;
     }
@@ -28,13 +28,13 @@
         background-size: 24px 24px;
     }
     #dark-mode{
-        height: 42px;
-        width: 42px;
+        height: 36px;
+        width: 36px;
         background-size: 32px 32px;
     }
     #light-mode{
-        height: 42px;
-        width: 42px;
+        height: 36px;
+        width: 36px;
         background-size: 32px 32px;
     }
     #note-wrapper{

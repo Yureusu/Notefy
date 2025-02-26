@@ -221,6 +221,7 @@ document.getElementById("dark-mode").addEventListener("click", () => {
     document.documentElement.style.setProperty('--mode-fcolor', '#dee4e7');
     document.documentElement.style.setProperty('--mode-bcolor', '#37474f');
     document.documentElement.style.setProperty('--mode-wcolor', '#222222');
+    document.querySelector("body").style.backgroundColor = "#222222";
 });
 
 document.getElementById("light-mode").addEventListener("click", () => {
@@ -231,6 +232,7 @@ document.getElementById("light-mode").addEventListener("click", () => {
     document.documentElement.style.setProperty("--mode-fcolor", "#37474f");
     document.documentElement.style.setProperty('--mode-bcolor', '#dee4e7');
     document.documentElement.style.setProperty('--mode-wcolor', '#ffffff');
+    document.querySelector("body").style.backgroundColor = "#ffffff";
 });
 
 //change color
