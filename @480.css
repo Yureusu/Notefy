@@ -66,8 +66,8 @@
         font-size: 12px;
     }
     #add-popup, #edit-popup{
-        height: 480px;
-        width: 360px;
+        height: 420px;
+        width: 320px;
     }
     #close-note, #close-editnote{
         top: -14px;
@@ -113,5 +113,28 @@
     #blue-note{
         height: 18px;
         width: 18px;
+    }
+
+    #successedit-popup, #successdelete-popup, #addednote-popup{
+        height: 320px;
+        width: 320px;
+    }
+    #close-sucedpopup, #close-sucdelpopup, #close-addedpopup{
+        top: -14px;
+        right: -14px;
+        font-size: 24px;
+        padding: 8px;
+    }
+    #suced-wrapper h4, #sucdel-wrapper h4, #addednote-wrapper h4{
+        margin-top: 18px;
+        font-size: 24px;
+    }
+    #suced-wrapper img, #sucdel-wrapper img{
+        height: 120px;
+        width: 120px;
+    }
+    #addednote-wrapper img{
+        height: 100px;
+        width: 100px;
     }
 }
