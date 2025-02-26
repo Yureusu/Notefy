@@ -85,26 +85,41 @@ onSnapshot(colRef, (snapshot) => {
             noteField.appendChild(noteSpan);
 
             //sort a to z
-            let sortAtoz = false;
-
-            function sortSpans() {
-                if (sortAtoz == true){
+            let sort = false;
+            document.getElementById("sort-atoz").addEventListener("click", () => {
+                sort = true;
+                sortAtoZ();
+            });     
+            //sort by date
+            document.getElementById("sort-ztoa").addEventListener("click", () => {
+                sort = true;
+                sortZtoA();
+            });
+            function sortAtoZ() {
+                if (sort == true){
                     let container = document.getElementById("note-wrapper");
-                    let spans = Array.from(container.children);
-                
-                    spans.sort((a, b) => a.textContent.localeCompare(b.textContent));
-                
+                    let span = document.querySelectorAll("#note-span");
+                    let spans = Array.from(span);
+                    spans.sort((a, b) => a.textContent.localeCompare(b.textContent));         
                     spans.forEach(span => container.appendChild(span));
                 }
                 else{
-                    sortAtoz = false;
+                    sort = false;
                 }
             }
-
-            sortSpans();
-
+            function sortZtoA() {
+                if (sort == true){
+                    let container = document.getElementById("note-wrapper");
+                    let span = document.querySelectorAll("#note-span");
+                    let spans = Array.from(span);
+                    spans.sort((a, b) => b.textContent.localeCompare(a.textContent));         
+                    spans.forEach(span => container.appendChild(span));
+                }
+                else{
+                    sort = false;
+                }
+            }
             //
-
             let idArray = [];
             document.querySelectorAll("#note-span").forEach(element => {
                 idArray.push(element.getAttribute("name"));
@@ -201,6 +216,8 @@ async function deleteDocument(docName, docId) {
 document.getElementById("dark-mode").addEventListener("click", () => {
     document.getElementById("light-mode").style.display = "block";
     document.getElementById("dark-mode").style.display = "none";
+    document.getElementById("sort-atoz").style.filter = "invert(100%)";
+    document.getElementById("sort-ztoa").style.filter = "invert(100%)";
     document.documentElement.style.setProperty('--mode-fcolor', '#dee4e7');
     document.documentElement.style.setProperty('--mode-bcolor', '#37474f');
     document.documentElement.style.setProperty('--mode-wcolor', '#222222');
@@ -209,6 +226,8 @@ document.getElementById("dark-mode").addEventListener("click", () => {
 document.getElementById("light-mode").addEventListener("click", () => {
     document.getElementById("dark-mode").style.display = "block";
     document.getElementById("light-mode").style.display = "none";
+    document.getElementById("sort-atoz").style.filter = "invert(0%)";
+    document.getElementById("sort-ztoa").style.filter = "invert(0%)";
     document.documentElement.style.setProperty("--mode-fcolor", "#37474f");
     document.documentElement.style.setProperty('--mode-bcolor', '#dee4e7');
     document.documentElement.style.setProperty('--mode-wcolor', '#ffffff');

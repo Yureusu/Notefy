@@ -81,9 +81,41 @@ body{
 #header-space{
     flex: 1;
 }
+#sort-ztoa{
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: block;
+    background-image: url('assets/ztoa.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    filter: invert(0%);
+}
+#sort-atoz{
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: block;
+    background-image: url('assets/atoz.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    filter: invert(0%);
+}
 #dark-mode{
-    height: 64px;
-    width: 64px;
+    height: 58px;
+    width: 58px;
     border-radius: 50%;
     border: none;
     outline: none;
@@ -91,14 +123,14 @@ body{
     background-image: url('assets/dark-mode.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 48px 48px;
+    background-size: 42px 42px;
     background-color: transparent;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 #light-mode{
-    height: 64px;
-    width: 64px;
+    height: 58px;
+    width: 58px;
     border-radius: 50%;
     border: none;
     outline: none;
@@ -106,7 +138,7 @@ body{
     background-image: url('assets/light-mode.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 48px 48px;
+    background-size: 42px 42px;
     background-color: transparent;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -256,13 +288,13 @@ body{
     background-color: var(--mode-bcolor);
 }
 #note-wrapper span h1{
-    color: var(--mode-fcolor);
+    color: #37474f;
     font-size: 16px;
     font-weight: 600;
     text-overflow: ellipsis;
 }
 #note-wrapper span h2{
-    color: var(--mode-fcolor);
+    color: #37474f;
     font-size: 14px;
     font-weight: normal;
     overflow: hidden;
