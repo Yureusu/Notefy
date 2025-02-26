@@ -10,12 +10,7 @@
         height: auto;
         width: 100%;
         padding: 12px;
-        background-color: var(--mode-bcolor);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 12px;
+        gap: 8px;
     }
     #title-icon{
         height: 42px;
