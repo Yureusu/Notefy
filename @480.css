@@ -38,7 +38,7 @@
         background-size: 32px 32px;
     }
     #note-wrapper{
-        height: auto;
+        max-height: 100vh;
         width: 100%;
         padding: 12px;
         gap: 12px;
