@@ -50,37 +50,6 @@ body{
     color: var(--mode-fcolor);
     font-weight: bold;
 }
-#note-wrapper{
-    flex: 1;
-    width: 100%;
-    padding: 12px;
-    gap: 12px;
-    border: 1px solid var(--mode-fcolor);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    overflow-y: scroll;
-    background-color: var(--mode-wcolor);
-}
-#add-note{
-    height: 190px;
-    width: 190px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--mode-bcolor);
-}
-#add-note i{
-    font-size: 96px;
-    color: var(--mode-fcolor);
-}
-#header-space{
-    flex: 1;
-}
 #sort-ztoa{
     height: 46px;
     width: 46px;
@@ -143,6 +112,38 @@ body{
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
+#header-space{
+    flex: 1;
+}
+#note-wrapper{
+    flex: 1;
+    width: 100%;
+    padding: 12px;
+    gap: 12px;
+    border: 1px solid var(--mode-fcolor);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    background-color: var(--mode-wcolor);
+}
+#add-note{
+    height: 190px;
+    width: 190px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mode-bcolor);
+}
+#add-note i{
+    font-size: 96px;
+    color: var(--mode-fcolor);
+}
+/*add colors*/
 #add-wrapper{
     height: auto;
     width: 100%;

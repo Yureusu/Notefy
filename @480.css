@@ -1,0 +1,115 @@
+@media screen and (max-width: 480px){
+    .content-wrapper{
+        padding: 12px;
+        gap: 12px;
+    }
+    #header{
+        height: auto;
+        width: 100%;
+        padding: 12px;
+        background-color: var(--mode-bcolor);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+    #title-icon{
+        height: 42px;
+        width: 42px;
+        cursor: pointer;
+    }
+    #app-title{
+        font-size: 32px;
+        color: var(--mode-fcolor);
+        font-weight: bold;
+    }
+    #sort-ztoa, #sort-atoz{
+        height: 24px;
+        width: 24px;
+        background-size: 24px 24px;
+    }
+    #dark-mode{
+        height: 42px;
+        width: 42px;
+        background-size: 32px 32px;
+    }
+    #light-mode{
+        height: 42px;
+        width: 42px;
+        background-size: 32px 32px;
+    }
+    #note-wrapper{
+        height: auto;
+        width: 100%;
+        padding: 12px;
+        gap: 12px;
+        justify-content: center;
+    }
+    #add-note{
+        height: 180px;
+        width: 180px;
+    }
+    #add-note i{
+        font-size: 64px;
+    }
+    #note-wrapper span{
+        height: 180px;
+        width: 180px;
+    }
+    #note-wrapper span h1{
+        font-size: 12px;
+    }
+    #note-wrapper span h2{
+        font-size: 12px;
+    }
+    #add-popup, #edit-popup{
+        height: 480px;
+        width: 360px;
+    }
+    #close-note, #close-editnote{
+        top: -14px;
+        right: -14px;
+        font-size: 24px;
+        padding: 8px;
+    }
+    #title-area , #edit-titlearea{
+        font-size: 12px;
+    }
+    #note-area, #edit-notearea{
+        font-size: 12px;
+    }
+    #save-note, #edit-save{
+        font-size: 18px;
+    }
+    #delete-note{
+        font-size: 18px;
+    }
+    #change-color{
+        height: 18px;
+        width: 18px;
+    }
+    #color-popup{
+        height: 26px;
+        bottom: 15.5px;
+    }
+    #close-colorpopup{
+        font-size: 20px;
+    }
+    #null-note{
+        height: 18px;
+        width: 18px;
+    }
+    #red-note{
+        height: 18px;
+        width: 18px;
+    }
+    #green-note{
+        height: 18px;
+        width: 18px;
+    }
+    #blue-note{
+        height: 18px;
+        width: 18px;
+    }
+}
