@@ -47,15 +47,15 @@
         justify-content: center;
     }
     #add-note{
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
     }
     #add-note i{
         font-size: 64px;
     }
     #note-wrapper span{
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
     }
     #note-wrapper span h1{
         font-size: 12px;
