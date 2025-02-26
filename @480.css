@@ -3,6 +3,9 @@
         padding: 12px;
         gap: 12px;
     }
+    body{
+        height: auto;
+    }
     #header{
         height: auto;
         width: 100%;
@@ -44,6 +47,7 @@
         width: 100%;
         padding: 12px;
         gap: 12px;
+        align-items: flex-start;
         justify-content: center;
     }
     #add-note{
@@ -57,6 +61,7 @@
         height: 140px;
         width: 140px;
         padding: 12px;
+        align-self: flex-start;
     }
     #note-wrapper span h1{
         font-size: 12px;
