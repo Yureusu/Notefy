@@ -130,7 +130,7 @@ onSnapshot(colRef, (snapshot) => {
 
             allNotes.forEach(span => {
                 span.addEventListener("click", (event) => {
-                    if (event.target.tagName === "SPAN") {
+                    if (event.target.tagName === "SPAN" || event.target.tagName === H2) {
                         const editPopup = document.getElementById("edit-popup");
                         editPopup.style.display = "flex";
                         document.getElementById("close-editnote").addEventListener("click", () => {
