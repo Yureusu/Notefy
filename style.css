@@ -294,7 +294,6 @@ body{
     font-weight: 600;
     overflow: hidden;
     width: 164px;
-    height: 34px;
     text-overflow: ellipsis;
 }
 #note-wrapper span h2{
@@ -303,7 +302,6 @@ body{
     font-weight: normal;
     overflow: hidden;
     width: 164px;
-    height: 174px;
     text-overflow: ellipsis;
 }
 #delete-note{
