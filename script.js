@@ -76,6 +76,7 @@ onSnapshot(colRef, (snapshot) => {
 
             titleSpan.textContent = titleDisplay;
             textSpan.textContent = noteDisplay;
+            textSpan.setAttribute("id", "note-area")
             noteSpan.setAttribute("id", "note-span");
             noteSpan.setAttribute("name", currentId);
             noteSpan.style.backgroundColor = displayColor;
@@ -126,7 +127,7 @@ onSnapshot(colRef, (snapshot) => {
                 //console.log(idArray);
             });  
 
-            let allNotes = document.querySelectorAll("#note-span");
+            let allNotes = [document.querySelectorAll("#note-span"), document.getElementById("note-area")];
 
             allNotes.forEach(span => {
                 span.addEventListener("click", (event) => {
