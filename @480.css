@@ -57,13 +57,18 @@
         height: 140px;
         width: 140px;
         padding: 12px;
+        gap: 8px;
         align-self: flex-start;
     }
     #note-wrapper span h1{
         font-size: 12px;
+        width: 114px;
+        height: 34px;
     }
     #note-wrapper span h2{
         font-size: 12px;
+        width: 114px;
+        height: 174px;
     }
     #add-popup, #edit-popup{
         height: 420px;

@@ -79,10 +79,6 @@ onSnapshot(colRef, (snapshot) => {
             noteSpan.setAttribute("id", "note-span");
             noteSpan.setAttribute("name", currentId);
             noteSpan.style.backgroundColor = displayColor;
-            // textSpan.style.width = "174px";
-            // textSpan.style.whiteSpace = "pre";
-            textSpan.style.overflow = "hidden";
-            // textSpan.style.textOverflow = "ellipsis";
 
             noteSpan.appendChild(titleSpan);
             noteSpan.appendChild(textSpan);
