@@ -79,6 +79,10 @@ onSnapshot(colRef, (snapshot) => {
             noteSpan.setAttribute("id", "note-span");
             noteSpan.setAttribute("name", currentId);
             noteSpan.style.backgroundColor = displayColor;
+            // textSpan.style.width = "174px";
+            // textSpan.style.whiteSpace = "pre";
+            textSpan.style.overflow = "hidden";
+            // textSpan.style.textOverflow = "ellipsis";
 
             noteSpan.appendChild(titleSpan);
             noteSpan.appendChild(textSpan);
@@ -139,7 +143,7 @@ onSnapshot(colRef, (snapshot) => {
 
                         let idValue = event.target.getAttribute("name");
                         let currentTitle = event.target.querySelector("h1").textContent;
-                        let currentNote = event.target.querySelector("h2").textContent;        
+                        let currentNote = event.target.querySelector("h2").textContent;    
                         
                         console.log("The clicked note has an id: " + idValue + " " + "Title: " + currentTitle + " " + "Note: " + currentNote);      
 
