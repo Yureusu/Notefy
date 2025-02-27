@@ -76,7 +76,6 @@ onSnapshot(colRef, (snapshot) => {
 
             titleSpan.textContent = titleDisplay;
             textSpan.textContent = noteDisplay;
-            textSpan.setAttribute("id", "note-area")
             noteSpan.setAttribute("id", "note-span");
             noteSpan.setAttribute("name", currentId);
             noteSpan.style.backgroundColor = displayColor;
@@ -127,11 +126,11 @@ onSnapshot(colRef, (snapshot) => {
                 //console.log(idArray);
             });  
 
-            let allNotes = [document.querySelectorAll("#note-span"), document.getElementById("note-area")];
+            let allNotes = document.querySelectorAll("#note-span");
 
             allNotes.forEach(span => {
                 span.addEventListener("click", (event) => {
-                    if (event.target.tagName === "SPAN" || event.target.tagName === H2) {
+                    if (event.target.tagName === "SPAN") {
                         const editPopup = document.getElementById("edit-popup");
                         editPopup.style.display = "flex";
                         document.getElementById("close-editnote").addEventListener("click", () => {
