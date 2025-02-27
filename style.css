@@ -116,7 +116,7 @@ body{
     flex: 1;
 }
 #note-wrapper{
-    flex: 1;
+    height: 100%;
     width: 100%;
     padding: 12px;
     gap: 12px;
@@ -130,8 +130,8 @@ body{
     background-color: var(--mode-wcolor);
 }
 #add-note{
-    height: 190px;
-    width: 190px;
+    height: 200px;
+    width: 200px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -277,8 +277,8 @@ body{
     transition: 0.3s ease-in-out;
 }
 #note-wrapper span{
-    height: 190px;
-    width: 190px;
+    height: 200px;
+    width: 200px;
     cursor: pointer;
     padding: 24px;
     display: flex;

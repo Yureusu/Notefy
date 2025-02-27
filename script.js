@@ -156,8 +156,7 @@ onSnapshot(colRef, (snapshot) => {
 
                             document.querySelectorAll("#note-span").forEach(span => span.remove());
 
-                            updateDocument("notes", idValue, { title: updateTitle, note: updateNote });
-
+                            updateDocument("notes", idValue, { title: updateTitle, note: updateNote });                       
                         });
 
                         document.getElementById("delete-note").addEventListener("click", async (e) => {
@@ -188,6 +187,7 @@ async function updateDocument(docName, docId, newData) {
         document.getElementById("close-sucedpopup").addEventListener("click", () => {
             const sucedPopup = document.getElementById("successedit-popup");
             sucedPopup.style.display = "none";
+            location.reload();
         });
     } 
     catch (error) {
