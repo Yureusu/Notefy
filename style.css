@@ -119,6 +119,7 @@ body{
     height: 100%;
     width: 100%;
     padding: 12px;
+    padding-left: 42px;
     gap: 12px;
     border: 1px solid var(--mode-fcolor);
     display: flex;
@@ -130,8 +131,8 @@ body{
     background-color: var(--mode-wcolor);
 }
 #add-note{
-    height: 200px;
-    width: 200px;
+    height: 232px;
+    width: 232px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -277,15 +278,15 @@ body{
     transition: 0.3s ease-in-out;
 }
 #note-wrapper span{
-    height: 200px;
-    width: 200px;
+    height: 232px;
+    width: 232px;
     cursor: pointer;
     padding: 18px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 4px;
     background-color: var(--mode-bcolor);
 }
 #note-wrapper span h1{
@@ -294,6 +295,7 @@ body{
     font-weight: 600;
     overflow: hidden;
     width: 164px;
+    height: 32px;
     text-overflow: ellipsis;
 }
 #note-wrapper span h2{
