@@ -45,15 +45,15 @@
         gap: 12px;
     }
     #add-note{
-        height: 160px;
-        width: 160px;
+        height: 148px;
+        width: 148px;
     }
     #add-note i{
         font-size: 64px;
     }
     #note-wrapper span{
-        height: 160px;
-        width: 160px;
+        height: 148px;
+        width: 148px;
         padding: 12px;
         gap: 4px;
         align-self: flex-start;
