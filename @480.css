@@ -43,26 +43,25 @@
         padding: 12px;
         margin-bottom: 12px;
         gap: 12px;
-        align-items: flex-start;
-        justify-content: center;
     }
     #add-note{
-        height: 140px;
-        width: 140px;
+        height: 160px;
+        width: 160px;
     }
     #add-note i{
         font-size: 64px;
     }
     #note-wrapper span{
-        height: 140px;
-        width: 140px;
+        height: 160px;
+        width: 160px;
         padding: 12px;
-        gap: 10px;
+        gap: 4px;
         align-self: flex-start;
     }
     #note-wrapper span h1{
         font-size: 12px;
         width: 114px;
+        height: 20px;
     }
     #note-wrapper span h2{
         font-size: 12px;
